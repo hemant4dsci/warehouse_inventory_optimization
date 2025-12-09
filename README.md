@@ -1,7 +1,10 @@
 # Data-Driven Warehouse Inventory Optimization & Stock Movement Analysis
 
-This repository provides an **industry-standard project structure** for data analytics.  
-It is designed to help analysts start projects quickly, stay organized, and collaborate effectively.  
+Efficient inventory management is a critical factor in maintaining smooth warehouse operations while reducing costs and improving service. This project focuses on analyzing and optimizing inventory performance using real-world style datasets, advanced analytics, and business intelligence tools.
+
+The dataset used in this project simulates a complete warehouse ecosystem, including inventory records, sales transactions, purchase orders, supplier performance metrics, warehouse zones, bin locations, batch numbers, and expiry information. With this data, the project aims to uncover inefficiencies, identify risks, and propose data-driven solutions to improve inventory health.
+
+This project replicates real industry challenges, aligns with supply chain and operations analytics roles, and demonstrates the ability to connect domain expertise with data-driven decision-making. 
 
 ## Table of Contents
 
@@ -18,6 +21,23 @@ It is designed to help analysts start projects quickly, stay organized, and coll
 
 ## Project Objective
 
+The objective of this project is to enhance warehouse decision-making by leveraging data analytics to uncover inefficiencies, reduce operational risks, and optimize inventory performance. The project focuses on delivering clear, actionable insights that support strategic and day-to-day operations. Key objectives include:
+
+-   Identify stock risks such as slow-moving, dead, and near-expiry items.
+
+-   Reduce stockouts by analyzing demand patterns and monitoring reorder levels.
+
+-   Optimize inventory levels using data-driven reorder strategies.
+
+-   Improve supplier performance through lead-time and reliability analysis.
+
+-   Lower operational and holding costs by eliminating excess stock and improving inventory rotation.
+
+-   Strengthen warehouse efficiency by evaluating zone utilization and storage distribution.
+
+-   Enable informed decision-making through interactive dashboards and analytical reporting.
+
+These objectives collectively demonstrate the impact of analytics in improving warehouse operations and ensuring better control over inventory health.
 
 ## Project Files
 
@@ -39,18 +59,18 @@ It is designed to help analysts start projects quickly, stay organized, and coll
 data_analytics_project_template/
 │
 ├─ data/                    # Data storage
-│  ├─ final/                    # Final datasets (ready for reporting/ML models)
-│  ├─ interim/                  # Intermediate processed files
-│  └─ raw/                      # Raw untouched datasets
+│  ├─ final/                  # Final datasets (ready for reporting/ML models)
+│  ├─ interim/                # Intermediate processed files
+│  └─ raw/                    # Raw untouched datasets
 │
 ├─ logs/                    # Logging outputs (script runs, ETL jobs, errors)
 │
 ├─ notebooks/               # Jupyter notebooks (exploration, EDA, visualization)
 │
 ├─ reports/                 # Deliverables for stakeholders
-│  ├─ dashboards/           # Power BI/Tableau/Looker dashboards
-│  ├─ figures/              # Saved plots, charts, images
-│  └─ summary_reports/      # Business-style reports (PDF/Word/Markdown)
+│  ├─ dashboards/             # Power BI/Tableau/Looker dashboards
+│  ├─ figures/                # Saved plots, charts, images
+│  └─ summary_reports/        # Business-style reports (PDF/Word/Markdown)
 │
 ├─ scripts/                 # Reusable Python scripts
 │

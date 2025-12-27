@@ -6,7 +6,7 @@ The dataset used in this project simulates a complete warehouse ecosystem, inclu
 
 This project replicates real industry challenges, aligns with supply chain and operations analytics roles, and demonstrates the ability to connect domain expertise with data-driven decision-making. 
 
-## Table of Contents
+# *Table of Contents*
 
 + [Project Objective](#project-objective)
 + [Project Files](#project-files)
@@ -19,7 +19,7 @@ This project replicates real industry challenges, aligns with supply chain and o
 + [License](#license)
 + [Author](#author)
 
-## Project Objective
+# *Project Objective*
 
 The objective of this project is to enhance warehouse decision-making by leveraging data analytics to uncover inefficiencies, reduce operational risks, and optimize inventory performance. The project focuses on delivering clear, actionable insights that support strategic and day-to-day operations. Key objectives include:
 
@@ -39,62 +39,32 @@ The objective of this project is to enhance warehouse decision-making by leverag
 
 These objectives collectively demonstrate the impact of analytics in improving warehouse operations and ensuring better control over inventory health.
 
-## Project Files
+# *Project Files*
 
-### 1️⃣ Data Files
+### 1️. Data Files
+Source Data Contains **four raw datasets** used as inputs for the project:
 
-#### `data/raw/` — Source Data
-Contains **four raw datasets** used as inputs for the project:
+- `data/raw/inventory.csv` – Product details, stock levels, and inventory status  
+- `data/raw/sales.csv` – Historical sales transactions for demand analysis  
+- `data/raw/purchase_orders.csv` – Purchase order and replenishment records  
+- `data/raw/suppliers.csv` – Supplier information and delivery performance data 
 
-- **inventory.csv** – Product details, stock levels, and inventory status  
-- **sales.csv** – Historical sales transactions for demand analysis  
-- **purchase_orders.csv** – Purchase order and replenishment records  
-- **suppliers.csv** – Supplier information and delivery performance data  
+### 2️. Scripts & Notebook
 
-#### `data/interim/`
-- Cleaned and transformed datasets generated during preprocessing
-
-#### `data/final/`
-- Final, analysis-ready datasets used for modeling and reporting
-
-
-### 2️⃣ Database Setup (PostgreSQL)
-
-- **Database Name:** `warehouse_inventory`  
-- **Database Engine:** PostgreSQL  
-
-- **sql_queries/db_ddl_dml.sql**  
-  SQL script used to:
-  - Create database tables and relationships (DDL)
-  - Load and manipulate inventory, sales, supplier, and purchase order data (DML)
-  - Prepare structured data for analytics and reporting
++ `sql_scripts/db_ddl_dml.sql` – SQL script to create database 
++ `notebooks/inventory_analytics.ipynb` – Performs Exploratory Data Analysis
 
 > Raw CSV files are ingested into PostgreSQL and structured for efficient querying.
 
+### 3. Reporting & Visualization
 
-### 3️⃣ Data Analysis (Python)
+- `reports/dashboards/warehouse_inventory_optimization.pbix` - Power BI dashboard
 
-- **notebooks/inventory_analytics.ipynb**  
-  Jupyter Notebook used for:
-  - Connecting to the PostgreSQL database
-  - Data cleaning and preprocessing
-  - Exploratory Data Analysis (EDA)
-  - Inventory KPIs (stock levels, turnover rate, stockout risk)
-  - Supplier performance and demand trend analysis
+- `reports/figures` - Exported charts and visualizations used in reports and documentation
 
+- `reports/summary_reports/warehouse_inventory_report.pdf` - Final summarized report with insights and business recommendations
 
-### 4️⃣ Reporting & Visualization
-
-- **reports/dashboards/warehouse_inventory_optimization.pbix**  
-  Interactive Power BI dashboard built using processed data
-
-- **reports/figures/**  
-  Exported charts and visualizations used in reports and documentation
-
-- **reports/summary_reports/warehouse_inventory_report.pdf**  
-  Final summarized report with insights and business recommendations
-
-## Tools & Technologies
+# *Tools & Technologies*
 
 | Category | Tools / Technologies | Purpose |
 |--------|---------------------|---------|
@@ -112,57 +82,121 @@ Contains **four raw datasets** used as inputs for the project:
 |  | GitHub | Project hosting and collaboration |
 
 
-## Setup & Installation
+# *Setup & Installation*
 
+Follow these steps to set up the project locally:
 
-## Project Workflow
-
-
-## Analysis Summary & Key Insights
-
-
-## Project Structure
+### 1. Clone the Repository
 ```bash
-data_analytics_project_template/
-│
-├─ data/                    # Data storage
-│  ├─ final/                  # Final datasets (ready for reporting/ML models)
-│  ├─ interim/                # Intermediate processed files
-│  └─ raw/                    # Raw untouched datasets
-│
-├─ logs/                    # Logging outputs (script runs, ETL jobs, errors)
-│
-├─ notebooks/               # Jupyter notebooks (exploration, EDA, visualization)
-│
-├─ reports/                 # Deliverables for stakeholders
-│  ├─ dashboards/             # Power BI/Tableau/Looker dashboards
-│  ├─ figures/                # Saved plots, charts, images
-│  └─ summary_reports/        # Business-style reports (PDF/Word/Markdown)
-│
-├─ scripts/                 # Reusable Python scripts
-│
-├─ sql_scripts/             # All reusable SQL queries
-│
-├─ .gitignore               # Ignore data, logs, venv, credentials
-├─ LICENCE                  # Open-source license
-├─ README.md                # Project overview + instructions
-└─ requirements.txt         # Python dependencies
+git clone https://github.com/hemant4dsci/warehouse_inventory_optimization.git
 ```
 
-## Contributing
+### 2. Create a virtual enviroment
+```bash
+# For Windows
+python -m venv venv
+venv\Scripts\activate
+
+# For macOS/Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+# *Project Workflow*
+
+### 1. Data Collection
+   - Collected raw data files (`inventory.csv`, `sales.csv`, `purchase_orders.csv`, `suppliers.csv`) and stored them in the `data/raw/` directory.
+
+### 2. Database Setup
+   - Created a PostgreSQL database named **`warehouse_inventory`**.
+   - Designed database schema and relationships using SQL.
+   - Loaded raw CSV data into PostgreSQL tables using the SQL script in `sql_queries/db_ddl_dml.sql`.
+
+### 3. Data Analysis & Processing
+   - Performed data analysis using **`notebooks/inventory_analytics.ipynb`**.
+   - Connected the PostgreSQL database to Python using **SQLAlchemy** and **psycopg2**.
+   - Cleaned, transformed, and analyzed data using **Pandas** and **NumPy**.
+   - Conducted exploratory data analysis (EDA) to identify trends, anomalies, and patterns.
+   - Calculated key inventory KPIs such as inventory turnover, stock levels, stockout risk, and supplier performance.
+
+### 4. Visualization & Dashboarding
+   - Built an interactive Power BI dashboard using **`reports/dashboards/warehouse_inventory_optimization.pbix`**.
+   - Created and exported visualizations, which are stored in **`reports/figures/`**.
+
+### 5. Reporting & Insights
+   - Compiled findings and insights into a PDF report stored at  
+     **`reports/summary_reports/warehouse_inventory_report.pdf`**.
+   - Documented business insights, trends, and actionable recommendations.
+
+### 6. Version Control & Documentation
+   - Managed source code and project files using **Git** and **GitHub**.
+   - Documented project structure, workflow, and tools in the README.
+
+# *Project Structure*
+
+```bash
+warehouse_inventory_optimization/
+│
+├── data/                     # All datasets used in the project
+│   ├── raw/                      # Original, unprocessed source data
+│   │   ├── inventory.csv         
+│   │   ├── sales.csv            
+│   │   ├── purchase_orders.csv
+│   │   └── suppliers.csv        
+│   ├── interim/                  # Cleaned and transformed intermediate datasets
+│   └── final/                    # Final datasets used for analysis
+│
+├── notebooks/                # Jupyter notebooks for analysis
+│   └── inventory_analytics.ipynb
+│
+├── scripts/                  # Python scripts for automation and reusable logic
+│
+├── sql_queries/              # SQL scripts for database setup and queries
+│   └── db_ddl_dml.sql        
+│
+├── reports/                  # Project outputs and reports
+│   ├── dashboards/               # Business intelligence dashboards
+│   │   └── warehouse_inventory_optimization.pbix
+│   │                             
+│   ├── figures/                  # Exported charts and visualizations
+│   │   ├── inventory_optimization_dashboard.png
+│   │   ├── inventory_turnover_rate.png
+│   │   ├── inventory_value_status.png
+│   │   ├── product_expiry_status.png
+│   │   ├── stockout_risk_product.png
+│   │   └── supplier_delivery_performance.png
+│   └── summary_reports/          # Final summarized reports
+│       └── warehouse_inventory_report.pdf
+│                                   
+│
+├── logs/                     # Execution logs and debugging information
+│
+├── requirements.txt          # Python dependencies for the project
+├── README.md                 # Project documentation
+├── LICENCE                   # License information
+└── .gitignore                # Files and folders ignored by Git
+
+```
+
+# *Contributing*
 
 Contributions are welcome! Please fork the repository and submit a pull request.
 
 
-## License
+# *License*
 
 This project is licensed under the MIT License.
 
 
-## Author
+# *Author*
 
 Hi, I'm Hemant, a data enthusiast passionate about turning raw data into meaningful business insights.
 
-**Let’s connect:**
+### Let’s connect:
 - LinkedIn : [LinkedIn Profile](https://www.linkedin.com/in/hemant1491/)  
 - Email : hemant4dsci@gmail.com
